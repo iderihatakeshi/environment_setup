@@ -5,7 +5,7 @@ sudo yum -y install gcc gdb make git readline-devel zlib-devel bison flex perl-T
 git clone git://git.postgresql.org/git/postgresql.git
 cd postgresql
 
-./configure --prefix=$HOME/pgsql/master --enable-debug --enable-cassert --enable-tap-tests CFLAGS=-O0
+./configure --prefix=$HOME/pgsql/master --enable-debug --enable-cassert --enable-tap-tests CFLAGS=-O0 --with-pgport=$PGPORT
 make
 make install
 
